@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX CARDS</title>
+    <style>
+        .container{
+            width:700px;
+            height:1000px;
+            align-items:center;
+        }
+         .main{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-around;
+            align-content:space-around;
+            height:700px;
+            gap:10px;
+
+
+        }
+        img{
+            width:200px;
+            height:300px;
+        }
+        a{
+            color:red;
+            text-decoration:none;
+        }
+        .card{
+            width:200px;
+            border: 5px solid black;
+            text-align:center;
+            height:400px;
+            box-shadow: 5PX 5PX 5PX black;
+        }
+        p{
+            font-weight:600px;
+            font-size:12px;
+            color:darkblue;
+        }
+        .O_price{
+            color:grey;
+            text-decoration: line-through;
+            font-size:15px;
+            font-weight:600;
+        }
+        .A_price{
+            color:magenta;
+            font-size:16px;
+        }
+       
+        nav{
+            display:flex;
+            justify-content:space-around;
+        }
+        .card:active{
+            width:195px;
+            height:295px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1 style="color:darkmagenta"><center>FLEX CARDS USING CSS</center></h1>
+        <hr>
+        <hr>
+        <nav>
+            <a href="https://www.myntra.com/">HOME</a>
+            <a href="https://www.myntra.com/shop/women">WOMEN</a>
+            <a href="https://www.myntra.com/shop/men">MEN</a>
+            <a href="https://www.myntra.com/shop/kids">KIDS</a>
+            <a href="https://www.myntra.com/personal-care">BEAUTY</a>
+        </nav>
+        <hr>
+        <hr>
+    </header>
+    <div class="main">
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71RyKT6pkDL._AC_UL800_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>GOSIRIKI</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71mX4WATh-L._AC_UL800_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>ALVAMI</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/612r9MTlE2L._AC_UL800_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>KLOSIA</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/81WYKiWYMOL._AC_UL640_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>MANHAREE</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/51suEsggRLL._AC_UL800_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>GoSiriKi</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71BLkd39VKL._AC_UL640_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>ANNI DESIGNER</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/51eAtQZeCxL._AC_UL480_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>FABNEX</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61CBFYaORrL._AC_UL480_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>NERMOSA</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61lTlmg-kBL._AC_UL800_FMwebp_QL65_.jpg" alt="mens wear">
+            <h3>INDO ERA</h3>
+            <p>Rs.1000 <span class="O_price">Rs.2000</span>  <span class="A_price">&#40; 50 &#37; off&#41;</span></p>
+            
+        </div>
+    </div>
+    </div>
+</body>
+</html>
