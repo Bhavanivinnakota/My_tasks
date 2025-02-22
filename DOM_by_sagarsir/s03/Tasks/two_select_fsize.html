@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOnt Size Manipulation</title>
+    <style>
+        h2{
+        color:red;
+        background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="one">Javascript is super super Easy</h2>
+    <select id="selector">
+        <option>Select</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+    </select>
+    <script>
+        h2 = document.getElementById("one")
+          var selected = document.getElementById("selector");
+         selector.addEventListener("click",function(){
+                       const Size = selector.value;
+                       h2.style.fontSize = Size + "px";
+         });
+    </script>
+</body>
+</html>

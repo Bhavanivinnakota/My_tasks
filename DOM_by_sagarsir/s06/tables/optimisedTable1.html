@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table </title>
+</head>
+<body>
+    <button onclick="table()">Create Table</button>
+
+    <script>
+              function optimised(tbody){
+                var tr1 =document.createElement("tr");
+                var td1 =document.createElement("td");
+                var td2 =document.createElement("td");
+                var td3 =document.createElement("td");
+               
+                td1.innerText = "101";
+                td2.innerText = "Bhavani";
+                td3.innerText = "Hyderabad";
+                tr1.appendChild(td1);
+                tr1.appendChild(td2);
+                tr1.appendChild(td3);
+             tbody.appendChild(tr1);
+
+              }
+
+        function table(){
+            var table = document.createElement("table");
+
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+
+            var tr =document.createElement("tr");
+            var th1 = document.createElement("th");
+            var th2 = document.createElement("th");
+            var th3 = document.createElement("th");
+                  th1.innerText = "ID";  
+                  th2.innerText = "NAME";  
+                  th3.innerText = "CITY";    
+            thead.appendChild(tr);
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            tr.appendChild(th3);
+
+                  optimised(tbody);
+                  optimised(tbody);
+                  optimised(tbody);
+           
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            table.width = "300px";
+            table.rules="rows";
+            table.align="center";
+            var bodydom = document.querySelector("body");
+            bodydom.appendChild(table);
+
+        }
+        </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+   <h2>Title 1</h2> 
+   <h2>Title 2</h2>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusantium dolorem placeat quisquam obcaecati tenetur libero iste maxime distinctio quibusdam ab cumque sunt ad nisi laborum harum labore eveniet magni consectetur iusto, voluptas sit sequi eos. Magnam, nulla harum provident consectetur doloremque libero exercitationem vitae ullam? </p>
+   <button onclick="change()">Click Me</button>
+   <script>
+    function change(){
+        var btn = document.querySelectorAll("h2");
+        var h2dom = btn[1];
+        h2dom.style.backgroundColor="black";
+        h2dom.style.color="red";
+        var p = document.querySelectorAll("p")
+        pdom = p[0];
+        pdom.style.color="red";
+       
+    }
+   </script>
+
+</body>
+</html>

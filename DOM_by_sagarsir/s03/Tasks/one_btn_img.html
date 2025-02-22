@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        .contain{
+            text-align:center;
+           width:500px;
+           height:400px;
+            box-shadow: 5px 5px 5px black;
+        }
+        button{
+            color:red;
+            background-color: black;
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <img src="https://austingil.com/wp-content/uploads/HTML-Blog-Cover.png" width="250px" height="250px" id="img"/> <br>
+        <button onclick="change()" id="js">JAVASCRIPT</button> 
+        <button onclick="changeimg()" id="react">REACT JS</button> 
+    </div>
+    <script>
+        var imgg = document.getElementById("img");
+        var btn1 = document.getElementById("js")
+        var btn1 = document.getElementById("react")
+        function change(){
+            imgg.setAttribute('src',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ4qe-TiNdb7kONl0a1C3a1R3H9TPWKSJeGg&s");
+        }
+        function changeimg(){
+            imgg.setAttribute('src',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s");
+        }
+    </script>
+</body>
+</html>

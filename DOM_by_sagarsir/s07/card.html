@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Dynamically</title>
+    <style>
+        #root{
+            display:flex;
+            justify-content:space-evenly;
+            align-content:space-between ;
+            flex-wrap: wrap;
+
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createCards()">Click Me</button>
+    <div id="root"></div>
+   
+    <script>
+        function createCard(info){   //info ={url:"" , name:""}
+        var img =document.createElement("img");
+        img.src=info.url;
+        var h2 = document.createElement("h2");
+        h2.innerText = info.name;
+        var h4 = document.createElement("h4");
+        h4.innerText = "WE ARE WEB DEVELOPERSS ";
+          var btn = document.createElement("button");
+          btn.innerText = "ABOUT US";
+       
+              img.style.width="300px";
+              img.style.height="300px";
+              h2.style.color="red";
+              h4.style.color="blue";
+
+
+
+
+          var div = document.createElement("div");
+          div.appendChild(img);
+          div.appendChild(h2);
+          div.appendChild(h4);
+          div.appendChild(btn);
+
+          div.style.width="500px";
+          div.style.height="500px";
+          div.style.border="5px solid black";
+          div.style.textAlign="center";
+          div.style.boxShadow="0 0 10px black"
+   var bodydom = document.getElementById("root");
+   bodydom.append(div);
+        }
+
+        function createCards() {
+            // createCard();
+            // createCard()
+            // createCard()
+            // var data = ["raj","Riya","Zoya","rani"]  // to change the names for the different cards with different names.
+            var data = [{url:"https://www.shutterstock.com/image-photo/happy-smiling-business-woman-pointing-260nw-1017432850.jpg",name:"Riya"},
+            {url:"https://static.vecteezy.com/system/resources/thumbnails/038/974/578/small_2x/ai-generated-professional-portrait-of-a-competent-woman-free-photo.jpg",name:"Zoya"},
+            {url:"https://t4.ftcdn.net/jpg/06/79/50/91/360_F_679509191_FQW7KbRAaHVkCryRlomSQXOeM354SdJY.jpg",name:"Priya"},
+            {url:"https://burst.shopifycdn.com/photos/professional-smiling-woman.jpg?width=1000&format=pjpg&exif=0&iptc=0",name:"Hemu"}]
+            var x=0;
+            while (x<5){
+                createCard(data[x]);
+                x++;
+            }
+        }
+    </script>
+</body>
+</html>

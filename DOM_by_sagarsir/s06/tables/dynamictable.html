@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table </title>
+</head>
+<body>
+    <button onclick="table()">Create Table</button>
+
+    <script>
+        function table(){
+            var table = document.createElement("table");
+
+            var thead = document.createElement("thead");
+
+            var tr =document.createElement("tr");
+            var th1 = document.createElement("th");
+            var th2 = document.createElement("th");
+            var th3 = document.createElement("th");
+                  th1.innerText = "ID";  
+                  th2.innerText = "NAME";  
+                  th3.innerText = "CITY";    
+            thead.appendChild(tr);
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            tr.appendChild(th3);
+
+                  
+            var tbody = document.createElement("tbody");
+            var tr1 =document.createElement("tr");
+            var td1 =document.createElement("td");
+            var td2 =document.createElement("td");
+            var td3 =document.createElement("td");
+              td1.innerText = "01";
+              td2.innerText = "Bhavani";
+              td3.innerText = "Musheerabad";
+              tbody.append(tr1);
+              tr1.appendChild(td1);
+              tr1.appendChild(td2);
+              tr1.appendChild(td3);
+             
+
+            var tr2 =document.createElement("tr");
+            var td4 =document.createElement("td");
+            var td5 =document.createElement("td");
+            var td6 =document.createElement("td");
+             td4.innerText = "02";
+              td5.innerText = "Samantha";
+              td6.innerText = "Jubliee Hills";
+              tbody.append(tr2);
+              tr2.appendChild(td4);
+              tr2.appendChild(td5);
+              tr2.appendChild(td6);
+             
+
+            var tr3 =document.createElement("tr");
+            var td7 =document.createElement("td");
+            var td8 =document.createElement("td");
+            var td9 =document.createElement("td");
+              td7.innerText = "03";
+              td8.innerText = "Chaitu";
+              td9.innerText = "Flim Nagar";
+              tbody.append(tr3);
+              tr3.appendChild(td7);
+              tr3.appendChild(td8);
+              tr3.appendChild(td9);
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            table.width = "300px";
+            table.rules="rows";
+            table.align="center";
+            var bodydom = document.querySelector("body");
+            bodydom.appendChild(table);
+
+        }
+        </script>
+
+    
+</body>
+</html>

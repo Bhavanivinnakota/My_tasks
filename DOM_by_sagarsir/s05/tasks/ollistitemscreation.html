@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered Lists</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Paragraph Creation</title>
+</head>
+<body>
+    <h2>Paragraph Dom</h2>
+    <button onclick="fnchange()">DOM Button</button>
+    <script>
+        function fnchange(){
+        var ollist = document.createElement("ol");
+        var list1 = document.createElement("li");
+        var list2 = document.createElement("li");
+        var list3 = document.createElement("li");
+        var list4 = document.createElement("li");
+        var list5 = document.createElement("li");
+         list1.innerText="HTMl";
+         list2.innerText="CSS";
+         list3.innerText="JAVASCRIPT";
+         list4.innerText="REACT JS";
+         list5.innerText="BOOTSTRAP";
+           ollist.append(list1);
+           ollist.append(list2);
+           ollist.append(list3);
+           ollist.append(list4);
+           ollist.append(list5);
+           var bodydom = document.querySelector("body");
+           bodydom.appendChild(ollist);
+
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

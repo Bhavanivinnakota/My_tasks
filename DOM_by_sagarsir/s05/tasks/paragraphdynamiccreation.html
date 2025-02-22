@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Paragraph Creation</title>
+</head>
+<body>
+    <h2>Paragraph Dom</h2>
+    <button onclick="fnchange()">DOM Button</button>
+    <script>
+        function fnchange(){
+        var pdom = document.createElement("p");
+        pdom.innerText="My first Dynamic p element";
+        pdom.style.color="red";
+        var bodydom= document.querySelector("body");
+        bodydom.appendChild(pdom);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Creation</title>
+    <style>
+        .contain{
+            text-align: center;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+     <div class="contain">
+    <h2>Shoe/Hide Password</h2>
+    <input type="password" placeholder="Enter the password" id="password"/>
+    <button onclick="change()" id="togglebutton">Show Password</button>
+    </div>
+    <script>
+        const btn = document.getElementById("togglebutton")
+        const inputtype = document.getElementById("password");
+        function change(){
+            if (inputtype.type === 'password') {
+                inputtype.type = 'text'; // Show password
+                btn.innerText ="Hide Password";
+            } else {
+                inputtype.type = 'password'; // Hide password
+                btn.innerText = 'Show Password';
+            }
+
+        }
+    </script>
+</body>
+</html>

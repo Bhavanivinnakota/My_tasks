@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        .container{
+            width:300px;
+            border:5px solid black ;
+            box-shadow:5px 5px 5px black;
+            text-align:center;
+            margin:100px auto;
+            padding:50px;
+            color:white;
+            background-color: black;
+        }
+        .container div{
+            margin-bottom:20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    <form>
+    <h2>Form</h2>
+    <div>
+    <input type="text" placeholder="Enter Your Name" value="bhavani" id="username" />
+    </div>
+    <div>
+    <input type="password" placeholder="Enter your password" id="password" />
+    </div>
+    <div>
+    <input type="email" placeholder="Enter your email" id="email" />
+    </div>
+    <input type="checkbox"  id="darkmode" onclick="togglebutton()"/> Switch to Dark Mode <br><br>
+    <div>
+    <input type="button" value="Register" onclick="change()"/>
+  </div>
+    </div>
+    </form> 
+    <table border="5" id="table">
+        <tr>
+            <td>NAME</td>
+            <td>PASSWORD</td>
+            <td>EMAIL</td>
+        </tr>
+        <tr>
+            <td id="column1"></td>
+            <td id="column2"></td>
+            <td id="column3"></td>
+        </tr>
+    </table>
+
+    <script>
+       function togglebutton() {
+            const isDarkMode = document.getElementById("darkmode").checked;
+            const body = document.body;
+            const container = document.querySelector(".container");
+
+            if (isDarkMode) {
+                // Apply dark mode styles
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                container.style.backgroundColor = "black";
+                container.style.color = "white";
+                container.style.borderColor = "white";
+            } else {
+                // Apply light mode styles
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                container.style.backgroundColor = "white";
+                container.style.color = "black";
+                container.style.borderColor = "black";
+            }
+        }
+        function change(){
+        var name = document.getElementById("username");
+        user_name = name.value;
+        var passwords = document.getElementById("password");
+        password = passwords.value;
+        var emails = document.getElementById("email");
+        email = emails.value;
+        console.log(user_name,password,email);
+          var td1 = document.getElementById("column1");
+          username=username.value;
+          td1.innerText=username;
+          var td2 = document.getElementById("column2");
+          passwordss=passwords.value;
+          td2.innerText=passwordss;
+          var td3 = document.getElementById("column3");
+          emailss=emails.value;
+          td3.innerText=emailss;
+        }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Dynamically</title>
+</head>
+<body>
+    <button onclick="fnchange()">Click Me</button>
+    <div id="root"></div>
+    <script>
+        function fnchange(){
+        var img =document.createElement("img");
+        img.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png');
+        var h2 = document.createElement("h2");
+        h2.innerText = "HTML - HYPER TEXT MARKUP LANGUAGE";
+        var h4 = document.createElement("h4");
+        h4.innerText = "TO CREATE THE STRUCTURE OF A WEBPAGE";
+          var btn = document.createElement("button");
+          btn.innerText = "HTML Button";
+       
+              img.style.width="300px";
+              img.style.height="300px";
+              h2.style.color="red";
+              h4.style.color="blue";
+
+          var div = document.createElement("div");
+          div.appendChild(img);
+          div.appendChild(h2);
+          div.appendChild(h4);
+          div.appendChild(btn);
+
+          div.style.width="500px";
+          div.style.height="500px";
+          div.style.border="5px solid black";
+          div.style.textAlign="center";
+   var bodydom = document.querySelector("body");
+   bodydom.append(div);
+        }
+    </script>
+</body>
+</html>

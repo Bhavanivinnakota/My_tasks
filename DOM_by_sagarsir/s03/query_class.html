@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2 id="title">DOCUMENT OBJECT MODEL</h2>
+    <button id="toggle" onclick="change()">Check</button>
+    <script>
+        function change(){
+        var field = document.querySelector("#title");
+        field.innerText="DOM Manipulated";
+        field.style.color="red";
+        field.style.backgroundColor="black";
+        for (let key in field.style){
+            // document.write(key);
+            // document.write("<br/>")
+            console.log(key);
+
+        }
+            // for (let key in document){
+            //     console.log(key);
+            // }
+        }
+    </script>
+</body>
+</html>
