@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passing dynamic data to cards</title>
+    <script  src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<style>
+    #contain{
+       display:flex;
+       justify-content: space-evenly;
+    }
+    #container{
+        text-align:center;
+        padding:10px;
+        box-shadow: 0 0 10px black;
+        
+    }
+</style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+       
+         function repeat(source,data){
+            var img = React.createElement("img",{
+                src:source,
+                width:"300px",
+                height:"300px",
+            });
+            var h2 = React.createElement("h2",null,data);
+            var div = React.createElement("div",{id:"container"},[img,h2]);
+            return div;
+         };
+         function value(){
+            var consonant = React.createElement("div",{id:"contain"},[repeat("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s","HTML"),
+                repeat("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvyarc5ql5Qb0aUtE9MLaAapWxWpH8kXp0GA&s","CSS")
+            ] );
+            return consonant;
+         };
+         ReactDOM.render(value(),document.getElementById("root"));
+    </script>
+</body>
+</html>

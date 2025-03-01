@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+      var h2 = React.createElement("h2",null,"This is a h2 heading Element inside the first div");
+      var div1=React.createElement("div",null,h2);
+      var p =React.createElement("p","null","fjdfhfbdbhbnbncxxxnc  mx mnx nmx kjhdhjdhfjfdjbxmzheuaoiqyeuyeeqhoqeuyuyudjzczxcxzhiwhfjsdhfshfdsjhdkjvzkbdhfoehfhfdolkhdhsdhdsudsfhdsczmcxks");
+      var div2 = React.createElement("div",null,p);
+      var main_div = React.createElement("div",null,[div1,div2]);
+      ReactDOM.render(main_div,document.getElementById("root"));
+    </script>
+    </body>
+    </html>

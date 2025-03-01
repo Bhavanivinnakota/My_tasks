@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S4 Assignment</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<style>
+   
+    #container{
+        display:flex;
+        flex-direction: column;
+
+    }
+    #contain{
+      
+        position:static;
+        right:0px;
+
+    }
+    #diver{
+        display:flex;
+    }
+
+</style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+      
+        function called(url,name,para){
+            var img =React.createElement("img",{
+                src:url,
+                width:"300px",
+                height:"300px",
+            });
+            var h2 = React.createElement("h2",{
+                style:{
+                    color:"magenta",
+                }
+            },name);
+            var p = React.createElement("p",{
+                style:{
+                    color:"red",
+                }
+            },para);
+            var div1 = React.createElement("div",{id:"container",
+                style:{
+                    textAlign:"center",
+                }
+            },[h2,p]);
+            var div2 = React.createElement("div",{id:"contain"},img);
+            var costume =  React.createElement("div",{
+                id:"diver",
+                style:{
+                    dispaly:"flex",
+
+                }
+            },[div1,div2]);
+            return costume;
+        };
+            function values(){
+                var content = React.createElement("div",null,[
+                    called("c://Users//DELL//OneDrive//Desktop//REACT_Assignments//s06_Assignment//task2//html.png","HTML","HTML (HyperText Markup Language) is the standard markup language used to create and design the structure of web pages. It provides the basic framework for a webpage by defining elements like headings, paragraphs, links, images, tables, and more. " ),
+                    called("c://Users//DELL//OneDrive//Desktop//REACT_Assignments//s06_Assignment//task2//css.png", " CSS - Styling Language ","CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation and visual design of HTML elements on a webpage. It allows developers to control the layout, colors, fonts, spacing, and other design aspects of a website, enabling separation of content (HTML) and presentation (CSS)."),
+                    called("c://Users//DELL//Downloads//js.jpg","JavaScript ","JavaScript is a versatile, high-level programming language primarily used to create interactive and dynamic content on websites. It allows developers to implement complex")
+                ]);
+                return content;
+            };
+         ReactDOM.render(values(),document.getElementById("root"));
+    </script>
+</body>
+</html>

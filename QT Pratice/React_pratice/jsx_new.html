@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+    #contain{
+    display:flex;
+    justify-content: space-evenly;
+    
+    }
+    #container{
+        box-shadow:0 0 10px black;
+        text-align:center;
+        width:350px;
+        height:650px;
+    }
+    
+   button{
+    margin-right: 30px;
+   }
+</style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Cards(props){
+            return( <div id="container">
+                <img src={props.url} width="300px" height="300px"/>
+                <h2>{props.title} </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam cumque dicta atque laborum a deserunt ipsa deleniti, nemo nulla, odio natus et qui, nam reprehenderit quibusdam rerum quod praesentium. Aperiam quo, quas eveniet quidem corrupti soluta praesentium quis quaerat minima officia enim adipisci sint exercitationem vero et qui sunt dolorem.</p>
+                <button id="btn" > ADD TO CART</button>
+                <button> BUY NOW</button>
+            </div>
+        );
+        }
+        function Create(){
+            return(
+                <div id="contain">
+                    <Cards title={"MYNTRA SALE"} url={"c://Users//DELL//Downloads//download.jpg"}/>
+                    <Cards title ={"MYNTRA DRESSES"} url={"c://Users//DELL//Downloads//two.jpg"}/>
+                    <Cards title ={"MYNTRA OFFERS"} url={"c://Users//DELL//Downloads//one.jpg"}/>
+                    <Cards title ={"MYNTRA DISCOUNTS"} url={"c://Users//DELL//Downloads//download (1).jpg"}/>
+
+                    </div>
+            );
+        }
+        ReactDOM.render(<Create/>,document.getElementById("root"))
+    </script>
+</body>
+</html>

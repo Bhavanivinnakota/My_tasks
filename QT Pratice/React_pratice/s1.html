@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        var btn = document.createElement("button");
+        btn.innerText="JS Button";
+        document.getElementById("root").appendChild(btn);
+        btn.style.color="red";
+        btn.style.backgroundColor="yellow";
+       function lists(){
+        var ol = document.createElement("ul");
+        var li = document.createElement("li");
+        var li2= document.createElement("li");
+        var li3 = document.createElement("li");
+        var li4 = document.createElement("li");
+        li.innerText="January";
+        li2.innerText="Febuary";
+        li3.innerText="march";
+        li4.innerText = "April";
+        ol.appendChild(li);
+        ol.appendChild(li2);
+        ol.appendChild(li3);
+        ol.appendChild(li4);
+        document.getElementById("root").appendChild(ol);
+       }
+       lists();
+       lists();
+       lists();
+    </script>
+    
+</body>
+</html>
