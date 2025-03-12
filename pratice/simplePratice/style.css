@@ -1,0 +1,17 @@
+.carousel-item img {
+    height: 500px; /* Set your desired height */
+    object-fit: cover; /* Ensures the image covers the defined height without distortion */
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust the gap between items */
+    justify-content: space-between; /* Adjusts space between flex items */
+  }
+  
+  .card {
+    margin: 0.5rem; /* Adds margin around each card */
+    padding: 1rem; /* Adds padding inside each card */
+  }
+  
