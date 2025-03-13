@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar JS</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+           var img = document.createElement("img");
+           img.setAttribute('src','image.png');
+           img.setAttribute("width","200px");
+           document.getElementById("root").append(img);
+           var h1 = document.createElement("h1");
+           h1.innerText="Home";
+           var h1_1 = document.createElement("h1");
+           h1_1.innerText="Products";
+           var h1_2 = document.createElement("h1");
+           h1_2.innerText="Add to card";
+           document.getElementById("root").appendChild(h1);
+           document.getElementById("root").appendChild(h1_1);
+           document.getElementById("root").appendChild(h1_2);
+          var div =React.createElement("div")
+    div.appendChild(img);
+    div.appendChild(h1_1);
+
+    </script>
+</body>
+</html>
